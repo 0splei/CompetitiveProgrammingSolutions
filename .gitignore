@@ -1,0 +1,16 @@
+# Ejecutables Windows
+*.exe
+
+# Archivos compilados
+*.out
+*.o
+
+# Configuración local de VS Code
+.vscode/
+
+# Archivos temporales
+*.tmp
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
