@@ -10,9 +10,9 @@ typedef vector<ii> vii;
 typedef vector<ll> vl;
 typedef vector<LL> vll;
 
-#define pb push_back
-#define F first
-#define S second
+//#define pb push_back
+//#define F first
+//#define S second
 
 void SOLVE(){
 
