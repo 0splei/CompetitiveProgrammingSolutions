@@ -20,88 +20,26 @@ typedef vector<LL> vll;
 void SOLVE(){
 
     string p;
-    bool right = false, left = false, up = false, down = false;
+    ll x = 0, y = 0, area = 0;
 
     cin >> p;
 
-    if (p[0] == 'W') left = true;
-    else if (p[0] == 'E') right = true;
-    else if (p[0] == 'N') up = true;
-    else down = true;
+    for (char c : p) {
 
-    if (left == true) {
+        ll nx = x, ny = y;
 
-        for (ll i = 0; i < p.size(); i++) {
+        if (c == 'N') ny++;
+        else if (c == 'S') ny--;
+        else if (c == 'E') nx++;
+        else nx--;
 
-            if (p[i] == 'N') {
+        area += x * ny - nx * y;
+        x = nx, y = ny;
 
-                cout << "CW\n";
-                return;
-
-            } else if (p[i] == 'S') {
-
-                cout << "CCW\n";
-                return;
-
-            }
-
-        }
-
-    } else if (right == true) {
-
-        for (ll i = 0; i < p.size(); i++) {
-
-            if (p[i] == 'N') {
-
-                cout << "CCW\n";
-                return;
-
-            } else if (p[i] == 'S') {
-
-                cout << "CW\n";
-                return;
-
-            }
-
-        }
-
-    } else if (up == true) {
-
-        for (ll i = 0; i < p.size(); i++) {
-
-            if (p[i] == 'E') {
-
-                cout << "CW\n";
-                return;
-
-            } else if (p[i] == 'W') {
-
-                cout << "CCW\n";
-                return;
-
-            }
-
-        }
-        
-    } else if (down == true) {
-
-        for (ll i = 0; i < p.size(); i++) {
-
-            if (p[i] == 'W') {
-
-                cout << "CW\n";
-                return;
-
-            } else if (p[i] == 'E') {
-
-                cout << "CCW\n";
-                return;
-
-            }
-
-        }
-        
     }
+
+    if (area < 0) cout << "CW\n";
+    else cout << "CCW\n";
 
 }
 
