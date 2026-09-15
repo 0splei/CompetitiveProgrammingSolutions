@@ -63,7 +63,7 @@ void SOLVE(){
             if ('A' != ans[i - 1][j] && 'A' != ans[i][j - 1] && 'A' != grid[i][j]) ans[i][j] = 'A';
             else if ('B' != ans[i - 1][j] && 'B' != ans[i][j - 1] && 'B' != grid[i][j]) ans[i][j] = 'B';
             else if ('C' != ans[i - 1][j] && 'C' != ans[i][j - 1] && 'C' != grid[i][j]) ans[i][j] = 'C';
-            else ans[i][j] = 'D';
+            else ans[i][j] = 'D'; 
 
         }
 
