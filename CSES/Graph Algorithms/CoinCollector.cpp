@@ -63,8 +63,6 @@ void SOLVE(){
 
     }
 
-    // Kosaraju - Primera pasada
-
     memset(seen, false, sizeof(seen));
 
     for (ll i = 1; i <= n; i++) {
@@ -74,8 +72,6 @@ void SOLVE(){
     }
 
     reverse(order.begin(), order.end());
-
-    // Kosaraju - Segunda pasada
 
     memset(component, -1, sizeof(component));
 
@@ -92,8 +88,6 @@ void SOLVE(){
         }
 
     }
-
-    // Grafo de condensacion
 
     vector<vl> dag(comp);
     vl indegree(comp, 0);
@@ -115,8 +109,6 @@ void SOLVE(){
         }
 
     }
-
-    // DP sobre DAG (orden topologico)
 
     vl dp = coinSum;
     queue<ll> q;
